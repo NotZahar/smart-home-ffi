@@ -6,6 +6,13 @@ SCRIPT_DIR="$(dirname -- "${BASH_SOURCE[0]}")"
 
 cd "$SCRIPT_DIR"
 
+OS_NAME="$(uname -s)"
+
+if [[ "$OS_NAME" != "Linux" ]]; then
+	echo "Error: this script supports Linux only, current OS is ${OS_NAME}"
+	exit 1
+fi
+
 BUILD_MODE="debug"
 TARGETS=("smart-socket-static-app" "smart-socket-dynamic-app")
 APP_ARGS=()
