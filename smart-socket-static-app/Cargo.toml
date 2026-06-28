@@ -1,0 +1,8 @@
+[package]
+name = "smart-socket-static-app"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+smart-socket-ffi = { path = "../smart-socket-ffi" }

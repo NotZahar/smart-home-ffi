@@ -1,0 +1,13 @@
+[package]
+name = "smart-socket-ffi"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[lib]
+name = "smart_socket_ffi"
+crate-type = ["rlib", "staticlib", "cdylib"]
+
+[dependencies]
+num-traits = "0.2"
+rand = "0.10"
